@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 String message = "Toasty Message";
                 int duration = Toast.LENGTH_SHORT;
                 Toast.makeText(getApplicationContext(), message, duration).show();
@@ -40,5 +40,41 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("LIFECYCLE", "snackbar message shown");
             }
         });
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        Log.d("LAB4", "onStart() was executed");
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        Log.d("LAB4", "onResume() was executed");
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Log.d("LAB4", "onPause() was executed");
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+        Log.d("LAB4", "onStop() was executed");
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        Log.d("LAB4", "onDestroy() was executed");
+    }
+
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        Log.d("LAB4", "onRestart() was executed");
     }
 }
