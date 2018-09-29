@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
                 String message = "Toasty Message";
                 int duration = Toast.LENGTH_SHORT;
                 Toast.makeText(getApplicationContext(), message, duration).show();
-                Log.d("LIFECYCLE", "toast message shown");
             }
         });
 
@@ -37,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 int duration = Snackbar.LENGTH_SHORT;
 
                 Snackbar.make(view, message, duration).show();
-                Log.d("LIFECYCLE", "snackbar message shown");
             }
         });
+        Log.d("LAB4", "onCreate() was executed");
     }
 
     @Override
